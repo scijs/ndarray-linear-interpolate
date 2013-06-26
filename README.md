@@ -9,7 +9,7 @@ Example
 var ndarray = require("ndarray")
 var interp = require("ndarray-linear-interpolate")
 
-var x = ndarray.zeros([3, 3])
+var x = ndarray(new Float32Array(9), [3, 3])
 x.set(1, 1, 1.0)
 
 for(var u=0.0, u<=3.0; u+=0.25) {
