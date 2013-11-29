@@ -17,8 +17,8 @@ function interp2d(arr, x, y) {
     , s1 = 0 <= ix+1 && ix+1 < arr.shape[0]
     , iy = Math.floor(y)
     , fy = y - iy
-    , t0 = 0 <= iy   && iy   < arr.shape[0]
-    , t1 = 0 <= iy+1 && iy+1 < arr.shape[0]
+    , t0 = 0 <= iy   && iy   < arr.shape[1]
+    , t1 = 0 <= iy+1 && iy+1 < arr.shape[1]
     , w00 = s0&&t0 ? arr.get(ix  ,iy  ) : 0.0
     , w01 = s0&&t1 ? arr.get(ix  ,iy+1) : 0.0
     , w10 = s1&&t0 ? arr.get(ix+1,iy  ) : 0.0
@@ -33,12 +33,12 @@ function interp3d(arr, x, y, z) {
     , s1 = 0 <= ix+1 && ix+1 < arr.shape[0]
     , iy = Math.floor(y)
     , fy = y - iy
-    , t0 = 0 <= iy   && iy   < arr.shape[0]
-    , t1 = 0 <= iy+1 && iy+1 < arr.shape[0]
+    , t0 = 0 <= iy   && iy   < arr.shape[1]
+    , t1 = 0 <= iy+1 && iy+1 < arr.shape[1]
     , iz = Math.floor(z)
     , fz = z - iz
-    , u0 = 0 <= iz   && iz   < arr.shape[0]
-    , u1 = 0 <= iz+1 && iz+1 < arr.shape[0]
+    , u0 = 0 <= iz   && iz   < arr.shape[2]
+    , u1 = 0 <= iz+1 && iz+1 < arr.shape[2]
     , w000 = s0&&t0&&u0 ? arr.get(ix,iy,iz)       : 0.0
     , w010 = s0&&t1&&u0 ? arr.get(ix,iy+1,iz)     : 0.0
     , w100 = s1&&t0&&u0 ? arr.get(ix+1,iy,iz)     : 0.0
