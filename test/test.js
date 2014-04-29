@@ -1,7 +1,9 @@
 var ndarray = require("ndarray")
 var interp = require("../interp.js")
+var zeros = require("zeros")
 
-var x = ndarray.zeros([3, 3])
+
+var x = zeros([3, 3])
 x.set(1, 1, 1.0)
 
 for(var u=0.0; u<=3.0; u+=0.25) {

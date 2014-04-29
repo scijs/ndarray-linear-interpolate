@@ -1,19 +1,19 @@
 {
   "name": "ndarray-linear-interpolate",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Multilinear interplation for ndarrays",
   "main": "interp.js",
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "ndarray": "~0.2.0",
-    "tap": "~0.4.2"
+    "ndarray": "^1.0.0",
+    "tape": "^2.12.3",
+    "zeros": "0.0.0"
   },
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tape test/*.js"
   },
   "repository": {
     "type": "git",
